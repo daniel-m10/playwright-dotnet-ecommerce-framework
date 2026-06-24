@@ -2,7 +2,7 @@
 using Microsoft.Playwright.NUnit;
 using NUnit.Framework.Interfaces;
 
-namespace PlaywrightDotnetEcommerce.Tests.Tests.Fixtures;
+namespace PlaywrightDotnetEcommerce.Tests.Fixtures;
 
 public class BaseTest : PageTest
 {
