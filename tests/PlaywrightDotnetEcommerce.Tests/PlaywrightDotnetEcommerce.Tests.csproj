@@ -26,7 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Fixtures\" />
+    <Folder Include="Tests\" />
   </ItemGroup>
 
 </Project>
