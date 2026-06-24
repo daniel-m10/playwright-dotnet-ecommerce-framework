@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/PlaywrightDotnetEcommerce.Framework/PlaywrightDotnetEcommerce.Framework.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/PlaywrightDotnetEcommerce.Tests/PlaywrightDotnetEcommerce.Tests.csproj" />
+  </Folder>
+</Solution>
