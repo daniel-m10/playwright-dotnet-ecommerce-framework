@@ -22,6 +22,6 @@ public class LoginPage(IPage page)
     {
         await page.GotoAsync(TestConfiguration.BaseUrl);
     }
-    
+
     public ILocator ErrorMessageContainer { get; } = page.Locator("[data-test='error']");
 }
