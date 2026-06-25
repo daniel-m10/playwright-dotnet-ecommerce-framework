@@ -42,4 +42,12 @@ public class InventoryTests : BaseTest
 
         await Expect(_inventoryPage.FirstItemPrice).ToContainTextAsync("7.99");
     }
+    
+    [Test]
+    public async Task ShouldAddProductToCart()
+    {
+        await _inventoryPage.AddItemToCartByNameAsync("Sauce Labs Backpack");
+        
+        await Expect(_inventoryPage.ShoppingCartBadge).ToHaveTextAsync("1");
+    }
 }
