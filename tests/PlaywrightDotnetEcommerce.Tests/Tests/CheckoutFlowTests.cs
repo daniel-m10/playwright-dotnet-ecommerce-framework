@@ -24,7 +24,7 @@ public class CheckoutFlowTests : BaseTest
 
         _inventoryPage = new InventoryPage(Page);
         await _inventoryPage.AddItemToCartByNameAsync("Sauce Labs Backpack");
-        await _inventoryPage.GoToCartAsync();
+        await _inventoryPage.Header.GoToShoppingCartAsync();
 
         _cartPage = new CartPage(Page);
         await _cartPage.CheckoutAsync();
