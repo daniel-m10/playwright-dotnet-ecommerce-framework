@@ -28,16 +28,16 @@ public class CartTests : BaseTest
     public async Task ShouldNavigateToCartAfterAddingProduct()
     {
         await _inventoryPage.AddItemToCartByNameAsync("Sauce Labs Backpack");
-        await _inventoryPage.GoToCartAsync();
+        await _inventoryPage.Header.GoToShoppingCartAsync();
         
-        await Expect(_cartPage.CartTitle).ToBeVisibleAsync();
+        await Expect(_cartPage.Header.PageTitle).ToBeVisibleAsync();
     }
 
     [Test]
     public async Task ShouldRemoveProductFromCart()
     {
         await _inventoryPage.AddItemToCartByNameAsync("Sauce Labs Backpack");
-        await _inventoryPage.GoToCartAsync();
+        await _inventoryPage.Header.GoToShoppingCartAsync();
         
         await _cartPage.RemoveItemFromCartByNameAsync("Sauce Labs Backpack");
         

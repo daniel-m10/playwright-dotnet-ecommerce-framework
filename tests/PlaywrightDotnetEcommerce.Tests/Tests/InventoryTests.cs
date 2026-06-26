@@ -24,7 +24,7 @@ public class InventoryTests : BaseTest
     [Test]
     public async Task ShouldDisplayProductsAfterLogin()
     {
-        await Expect(_inventoryPage.Title).ToHaveTextAsync("Products");
+        await Expect(_inventoryPage.Header.PageTitle).ToHaveTextAsync("Products");
     }
 
     [Test]
@@ -42,12 +42,12 @@ public class InventoryTests : BaseTest
 
         await Expect(_inventoryPage.FirstItemPrice).ToContainTextAsync("7.99");
     }
-    
+
     [Test]
     public async Task ShouldAddProductToCart()
     {
         await _inventoryPage.AddItemToCartByNameAsync("Sauce Labs Backpack");
-        
-        await Expect(_inventoryPage.ShoppingCartBadge).ToHaveTextAsync("1");
+
+        await Expect(_inventoryPage.Header.ShoppingCartBadge).ToHaveTextAsync("1");
     }
 }

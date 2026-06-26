@@ -1,4 +1,5 @@
 ﻿using Microsoft.Playwright;
+using PlaywrightDotnetEcommerce.Framework.Components;
 
 namespace PlaywrightDotnetEcommerce.Framework.Pages;
 
@@ -8,7 +9,7 @@ public class CartPage(IPage page)
         page.GetByRole(AriaRole.Button, new PageGetByRoleOptions { Name = "Checkout" });
 
     public ILocator InventoryItem => page.Locator("[data-test='inventory-item']");
-    public ILocator CartTitle => page.Locator("[data-test='secondary-header']");
+    public HeaderComponent Header => new(page);
 
     public async Task RemoveItemFromCartByNameAsync(string productName)
     {
