@@ -4,7 +4,7 @@ using NUnit.Framework.Interfaces;
 
 namespace PlaywrightDotnetEcommerce.Tests.Fixtures;
 
-public class BaseTest : PageTest
+public abstract class BaseTest : PageTest
 {
     [SetUp]
     public async Task StartTracing()
